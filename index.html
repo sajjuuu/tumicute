@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shafia eto CuTEUWU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffccff; /* Light pink background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+
+        h1 {
+            font-size: 4em;
+            animation: fadeIn 3s;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1 span {
+            display: inline-block; /* Enables individual animations for each word */
+        }
+
+        .word1 {
+            color: #ff69b4; /* Hot pink */
+            font-family: 'Pacifico', cursive; /* Changed font */
+            animation: float 2s infinite alternate; /* Changed animation to float */
+        }
+
+        .word2 {
+            color: #ff1493; /* Deep pink */
+            font-family: 'Comic Sans MS', cursive;
+            animation: float 2s infinite alternate; /* Changed animation to float */
+        }
+
+        .word3 {
+            color: #db7093; /* Pale violet red */
+            font-family: 'Papyrus', cursive;
+            animation: shake 0.5s infinite;
+        }
+
+        .word4 {
+            color: #ffb6c1; /* Light pink */
+            font-family: 'Verdana', sans-serif;
+            animation: swing 2s infinite;
+        }
+
+        .additional-text {
+            font-size: 1.5em;
+            color: #ff69b4; /* Hot pink */
+            margin-top: 20px;
+            animation: fadeIn 3s;
+            opacity: 0; /* Initial state */
+            animation: fadeIn 3s forwards; /* Animation with forwards */
+        }
+
+        /* Added background particle animation */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 105, 180, 0.5);
+            animation: float 3s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+        }
+
+        @keyframes swing {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(15deg); }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>
+            <span class="word1">Shafia</span> 
+            <span class="word2">tumi</span> 
+            <span class="word3">ONEK</span> 
+            <span class="word4">JOSS</span>
+        </h1>
+        <div class="additional-text">ATP shuntesi. dam year sesh hoye jacche</div>
+        <div class="additional-text">thanKS FOR BEING THE BESTEST PART THO</div>
+        <div class="additional-text">kaoke DIONA. APTTPTPTP DONT U APTPTP. ami ghumai. love u</div>
+    </div>
+
+    <!-- Particle effect -->
+    <div class="particles">
+        <!-- Generate particles dynamically -->
+        <script>
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                const size = Math.random() * 15 + 5; // Random size between 5 and 20px
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.top = `${Math.random() * 100}vh`;
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                document.querySelector('.particles').appendChild(particle);
+            }
+        </script>
+    </div>
+</body>
+</html>
